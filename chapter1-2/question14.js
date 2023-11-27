@@ -11,3 +11,5 @@
 function solution(n) {
     return (n % 3 == 0) ? "짝" : n;
 }
+
+solution(prompt('숫자를 입력하세요'));

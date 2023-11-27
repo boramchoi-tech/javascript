@@ -6,4 +6,4 @@
 */
 
 var arr = prompt('점수를 입력하세요').split(' ');
-~~arr.reduce((previousValue, currentValue) => Number(previousValue)+Number(currentValue)) / arr.length;
+~~(arr.reduce((previousValue, currentValue) => Number(previousValue)+Number(currentValue)) / arr.length);

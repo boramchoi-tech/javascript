@@ -6,14 +6,18 @@
     두 개를 합쳐 학생의 이름이 key이고 value가 수학 점수인 객체를 출력해 주세요.
 */
 
-function solution(input1, input2) {
-    var obj = new Object();
-    
-    var name = input1.split(' ');
-    var score = input2.split(' ');
-    
-    for (var i of name) {
-        i = score;
+var obj = new Map();
+
+function createObj(a, b) {
+    var nameArr = a.split(' ');
+    var scoreArr = b.split(' ');
+
+    if (nameArr.length != scoreArr.length) return;
+    for (var i in nameArr) {
+        obj.set(nameArr[i], scoreArr[i]);
     }
-    console.log(obj);
+
+    return obj;
 }
+
+createObj(prompt('이름'),prompt('성적'));
